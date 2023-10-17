@@ -65,7 +65,7 @@ func main() {
 
 	server.Use(cors.New(corsConfig))
 
-	router := server.Group("/api/v1")
+	router := server.Group("/")
 	router.GET("/healthchecker", func(ctx *gin.Context) {
 		message := "Welcome to andalalin"
 		ctx.JSON(http.StatusOK, gin.H{"status": "success", "message": message})

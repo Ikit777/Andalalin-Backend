@@ -1,8 +1,8 @@
 {
     "routes": [
       {
-        "source": "/api/v1/(.*)",
-        "destination": "/api/v1"
+        "src": "/api/v1/(.*)",
+        "dest": "/main.go"
       }
     ]
   }

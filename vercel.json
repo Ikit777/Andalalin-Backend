@@ -1,9 +1,0 @@
-{
-    "name": "andalalin",
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/$1"
-      }
-    ]
-  }

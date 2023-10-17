@@ -75,5 +75,5 @@ func main() {
 	UserRouteController.UserRoute(router)
 	AndalalinRouteController.AndalalainRoute(router)
 	DataMasterRouteController.DataMasterRoute(router)
-	log.Fatal(server.Run(":" + config.ServerPort))
+	server.Run(":" + config.ServerPort)
 }

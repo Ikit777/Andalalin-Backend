@@ -50,11 +50,6 @@ func init() {
 }
 
 func main() {
-	config, err := initializers.LoadConfig()
-	if err != nil {
-		log.Fatal("Could not load environment variables", err)
-	}
-
 	corsConfig := cors.DefaultConfig()
 
 	corsConfig.AllowOrigins = []string{"*"}
@@ -75,5 +70,5 @@ func main() {
 	UserRouteController.UserRoute(router)
 	AndalalinRouteController.AndalalainRoute(router)
 	DataMasterRouteController.DataMasterRoute(router)
-	log.Fatal(server.Run(":" + config.ServerPort))
+	server.Run(":8080")
 }

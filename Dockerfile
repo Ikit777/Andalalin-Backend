@@ -1,4 +1,4 @@
-# Use an official Ubuntu runtime as a parent image
+# Use an official Golang runtime as a parent image
 FROM golang:latest
 
 # Set the working directory to /app
@@ -11,9 +11,6 @@ COPY . /app
 RUN apt-get update && apt-get install -y \
     wkhtmltopdf \
     && rm -rf /var/lib/apt/lists/*
-
-# Expose port
-EXPOSE 8080
 
 # Build the Go app
 RUN go build -o main .
